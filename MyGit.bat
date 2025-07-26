@@ -187,7 +187,7 @@ git diff --cached --quiet --exit-code || set "has_changes=1"
 git ls-files --others --exclude-standard >nul 2>&1
 if !errorlevel! == 0 (
     echo 检测到新文件未被跟踪，正在添加...
-    git add .  :: 手动添加新文件
+    git add .  
 )
 
 :: 确认是否有变更
