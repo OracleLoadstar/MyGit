@@ -174,7 +174,6 @@ if "!config_choice!"=="1" (
 )
 
 :: ========== 功能函数 ==========
-
 :commit_and_push
 call :check_git_repo || goto :eof
 
@@ -184,6 +183,14 @@ set "has_changes=0"
 git diff --quiet --exit-code || set "has_changes=1"
 git diff --cached --quiet --exit-code || set "has_changes=1"
 
+:: 检查是否有未被跟踪的文件
+git ls-files --others --exclude-standard >nul 2>&1
+if !errorlevel! == 0 (
+    echo 检测到新文件未被跟踪，正在添加...
+    git add .  :: 手动添加新文件
+)
+
+:: 确认是否有变更
 if !has_changes!==0 (
     echo 没有检测到文件变更
     goto push_part
@@ -199,7 +206,8 @@ if "!commit_msg!"=="" (
 )
 
 echo 正在提交变更...
-git add .
+git add .  :: 再次确认添加文件
+git status -s  :: 显示暂存区状态，检查文件是否成功加入
 git commit -m "!commit_msg!"
 if errorlevel 1 (
     echo 提交失败！
@@ -228,7 +236,7 @@ if "!commit_msg!"=="" (
     goto :eof
 )
 
-git add .
+git add . 
 git commit -m "!commit_msg!"
 echo 提交完成！
 pause
