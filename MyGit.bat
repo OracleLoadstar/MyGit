@@ -206,7 +206,7 @@ if "!commit_msg!"=="" (
 )
 
 echo 正在提交变更...
-git add .  :: 再次确认添加文件
+git add . 
 git status -s  :: 显示暂存区状态，检查文件是否成功加入
 git commit -m "!commit_msg!"
 if errorlevel 1 (
