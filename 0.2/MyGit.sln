@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyGit", "MyGit\MyGit.vcxproj", "{C9AC170B-83AD-49B1-8FEE-0D449AD29501}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9AC170B-83AD-49B1-8FEE-0D449AD29501}.Debug|x64.ActiveCfg = Debug|x64
+		{C9AC170B-83AD-49B1-8FEE-0D449AD29501}.Debug|x64.Build.0 = Debug|x64
+		{C9AC170B-83AD-49B1-8FEE-0D449AD29501}.Debug|x86.ActiveCfg = Debug|Win32
+		{C9AC170B-83AD-49B1-8FEE-0D449AD29501}.Debug|x86.Build.0 = Debug|Win32
+		{C9AC170B-83AD-49B1-8FEE-0D449AD29501}.Release|x64.ActiveCfg = Release|x64
+		{C9AC170B-83AD-49B1-8FEE-0D449AD29501}.Release|x64.Build.0 = Release|x64
+		{C9AC170B-83AD-49B1-8FEE-0D449AD29501}.Release|x86.ActiveCfg = Release|Win32
+		{C9AC170B-83AD-49B1-8FEE-0D449AD29501}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {573CD717-E835-4047-8CA3-33A95D54610B}
+	EndGlobalSection
+EndGlobal
