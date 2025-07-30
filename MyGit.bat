@@ -362,6 +362,38 @@ goto :eof
 if not exist ".gitignore" (
     echo 生成 .gitignore 文件...
     (
+        echo # Prerequisites
+        echo *.d
+        echo # Compiled Object files
+        echo *.slo
+        echo *.lo
+        echo *.o
+        echo *.obj
+        echo # Precompiled Headers
+        echo *.gch
+        echo *.pch
+        echo # Linker files
+        echo *.ilk
+        echo # Debugger Files
+        echo *.pdb
+        echo # Compiled Dynamic libraries
+        echo *.so
+        echo *.dylib
+        echo *.dll
+        echo # Fortran module files
+        echo *.mod
+        echo *.smod
+        echo # Compiled Static libraries
+        echo *.lai
+        echo *.la
+        echo *.a
+        echo *.lib
+        echo # Executables
+        echo *.exe
+        echo *.out
+        echo *.app
+        echo # debug information files
+        echo *.dwo
         echo # Visual Studio
         echo .vs/
         echo x64/
@@ -375,6 +407,8 @@ if not exist ".gitignore" (
         echo *.log
         echo bin/
         echo obj/
+        echo #vcpkg
+        echo vcpkg/
     ) > .gitignore
 )
 exit /b
