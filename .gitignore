@@ -1,0 +1,11 @@
+# Visual Studio
+0.2/.vs/
+0.2/x64/
+*.suo
+*.user
+*.vcxproj.user
+*.db
+*.ipch
+*.log
+bin/
+obj/
